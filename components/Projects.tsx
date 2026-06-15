@@ -60,6 +60,21 @@ export default function Projects() {
       demo: "https://self-driving-loan-onboarding-agent.vercel.app/",
       image: "Screenshot 2026-06-15 215229.png",
     },
+        {
+      title: "Ai_interview_coach",
+      description: "This is a simple chatbot project built using Next.js. It helps users practice interview questions in a chat format.The chatbot asks questions and gives feedback on answers, just like a real interview.",
+      tech: ["React.js", "Node","API_KEY","MySQl","Prism"],
+      github: "https://github.com/ayush7662/Ai_interview_coach",
+      demo: " https://ai-interview-coach-osgh.vercel.app/",
+      image: "Screenshot 2026-06-15 221619.png",
+    },
+      {
+      title: "ai-summarizer-fullstack",
+      description: "A full-stack AI-powered application that processes unstructured text and converts it into meaningful structured insights using Large Language Models.This project summarizes unstructured text, extracts key points, and detects sentiment (positive/negative/neutral) using AI.",
+      github: "https://github.com/ayush7662/ai-summarizer-fullstack",
+      demo: " https://ai-summarizer-fullstack-1zeu.vercel.app/",
+      image: "Screenshot 2026-06-15 221619.png",
+    },
    
     
     

@@ -12,21 +12,21 @@ export default function Experience() {
   const experiences = [
     {
       title: "Software Developer",
-      company: "Tech Company",
-      period: "2023 - Present",
-      description: "Developing scalable web applications and AI-powered solutions using MERN stack and Python.",
+      company: "Technocolabs software",
+      period: "May 2025-july 2025",
+      description: "Developed an AI-powered website builder that generates, edits, previews, and deploys websites using conversational prompts.",
     },
     {
-      title: "AI Engineer Intern",
-      company: "AI Startup",
-      period: "2022 - 2023",
-      description: "Worked on implementing machine learning models and integrating OpenAI APIs for various applications.",
+      title: "web automation using playwright",
+      company: "credora",
+      period: "jan 2026-March 2026",
+      description: "Built an agentic automation system using Playwright to replicate web UIs by extracting DOM structure,screenshots, and computed CSS.",
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Agency",
-      period: "2021 - 2022",
-      description: "Built responsive web applications and RESTful APIs using Node.js, Express, and React.",
+      title: "AI,LLM, Agentic-Ai,Rag,pytorch,",
+      company: "Qualcomm Academy course",
+      period: "3- month",
+      description: "Ai-summarizer ",
     },
   ]
 
