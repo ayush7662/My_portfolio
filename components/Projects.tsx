@@ -19,12 +19,13 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
     },
     {
-      title: "Rainfall Prediction System",
-      description: "Machine learning model for accurate rainfall prediction using historical data",
-      tech: ["Python", "Machine Learning", "Scikit-learn"],
-      github: "https://github.com/ayushraj/rainfall-prediction",
+      title: "chat-app",
+      description: "A modern real-time chat application built with React (Vite) on the frontend and Node.js + Express + Socket.io on the backend.",
+
+      tech: ["React.js","Node.js","MongoDB","Express.js","RestAPI","prism"],
+      github: "https://github.com/ayush7662/chat-app",
       demo: "https://demo.example.com",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop",
+      image: "Screenshot 2026-06-15 210810.png",
     },
     {
       title: "Identity Reconciliation API",
@@ -37,7 +38,7 @@ export default function Projects() {
     {
       title: "AI Site Builder",
       description: "An AI-powered website builder is a software tool that uses artificial intelligence to automatically generate, edit, preview, and deploy websites based on simple conversational prompts from the user.",
-            tech: ["Node.js", "Express", "SQL"],
+            tech: ["Node.js", "Express", "SQL", "React.js","Stripe","prism",],
       github: "https://github.com/ayush7662/AI_SITE_BUILDER",
 
       demo: "12.05.2026_10.35.28_REC.mp4",
