@@ -40,7 +40,7 @@ export default function Projects() {
             tech: ["Node.js", "Express", "SQL"],
       github: "https://github.com/ayush7662/AI_SITE_BUILDER",
 
-      demo: "https://demo.example.com",
+      demo: "12.05.2026_10.35.28_REC.mp4",
       image: "Screenshot 2026-05-12 102118.png",
     },
     {
