@@ -74,7 +74,7 @@ export default function Projects() {
       tech:["React.js","Node.js","Express.js","OpenAi-API"],
       github: "https://github.com/ayush7662/ai-summarizer-fullstack",
       demo: " https://ai-summarizer-fullstack-1zeu.vercel.app/",
-      image: "Screenshot 2026-06-15 221619.png",
+      image: "Screenshot 2026-06-15 221811.png",
     },
    
     
