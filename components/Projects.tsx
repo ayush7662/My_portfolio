@@ -37,6 +37,8 @@ export default function Projects() {
     {
       title: "AI Site Builder",
       description: "An AI-powered website builder is a software tool that uses artificial intelligence to automatically generate, edit, preview, and deploy websites based on simple conversational prompts from the user.",
+            tech: ["Node.js", "Express", "SQL"],
+      github: "https://github.com/ayush7662/AI_SITE_BUILDER",
 
       demo: "https://demo.example.com",
       image: "Screenshot 2026-05-12 102118.png",
