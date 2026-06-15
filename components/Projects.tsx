@@ -35,12 +35,11 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
     },
     {
-      title: "JSON Schema Builder",
-      description: "Interactive tool for building and validating JSON schemas with visual interface",
-      tech: ["React", "Ant Design", "TypeScript"],
-      github: "https://github.com/ayushraj/json-schema-builder",
+      title: "AI Site Builder",
+      description: "An AI-powered website builder is a software tool that uses artificial intelligence to automatically generate, edit, preview, and deploy websites based on simple conversational prompts from the user.",
+
       demo: "https://demo.example.com",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop",
+      image: "Screenshot 2026-05-12 102118.png",
     },
     {
       title: "AI Resume Analyzer",
