@@ -53,37 +53,16 @@ export default function Projects() {
       image: "Screenshot 2026-06-15 212501.png",
     },
     {
-      title: "Vibe Check",
-      description: "An AI-powered quiz platform that lets you create engaging quizzes instantly, uncover personality insights, and share with friends. Whether you're testing knowledge or exploring vibes, Vibe Check makes learning and self-discovery fun and interactive.",
-      tech: ["Next.js", "Tailwind.css+ Redix UI"," Supabase","Google Gemini Flash 2.0","Framer Motion", "Python"],
-      github: "https://github.com/ayush7662/Role-1--vibe-check",
-      demo: "https://role-1-vibe-check.vercel.app/",
-      image: "Screenshot 2026-06-15 212501.png",
+      title: "Self-Driving Loan Onboarding Agent",
+      description: "A prototype of an AI-powered loan onboarding agent that takes initiative and never hallucinates.Left panel: An intelligent chat agent that drives the conversation forwardRight panel: A live application form that fills in real-time as the agent works.",
+      tech: ["React.js", "Vite"," Plain CSS","Mock data/APIs"],
+      github: "https://github.com/ayush7662/Self-Driving-Loan-Onboarding-Agent",
+      demo: "https://self-driving-loan-onboarding-agent.vercel.app/",
+      image: "Screenshot 2026-06-15 215229.png",
     },
-    {
-      title: "Vibe Check",
-      description: "An AI-powered quiz platform that lets you create engaging quizzes instantly, uncover personality insights, and share with friends. Whether you're testing knowledge or exploring vibes, Vibe Check makes learning and self-discovery fun and interactive.",
-      tech: ["Next.js", "Tailwind.css+ Redix UI"," Supabase","Google Gemini Flash 2.0","Framer Motion", "Python"],
-      github: "https://github.com/ayush7662/Role-1--vibe-check",
-      demo: "https://role-1-vibe-check.vercel.app/",
-      image: "Screenshot 2026-06-15 212501.png",
-    },
-    {
-      title: "Vibe Check",
-      description: "An AI-powered quiz platform that lets you create engaging quizzes instantly, uncover personality insights, and share with friends. Whether you're testing knowledge or exploring vibes, Vibe Check makes learning and self-discovery fun and interactive.",
-      tech: ["Next.js", "Tailwind.css+ Redix UI"," Supabase","Google Gemini Flash 2.0","Framer Motion", "Python"],
-      github: "https://github.com/ayush7662/Role-1--vibe-check",
-      demo: "https://role-1-vibe-check.vercel.app/",
-      image: "Screenshot 2026-06-15 212501.png",
-    },
-    {
-      title: "Vibe Check",
-      description: "An AI-powered quiz platform that lets you create engaging quizzes instantly, uncover personality insights, and share with friends. Whether you're testing knowledge or exploring vibes, Vibe Check makes learning and self-discovery fun and interactive.",
-      tech: ["Next.js", "Tailwind.css+ Redix UI"," Supabase","Google Gemini Flash 2.0","Framer Motion", "Python"],
-      github: "https://github.com/ayush7662/Role-1--vibe-check",
-      demo: "https://role-1-vibe-check.vercel.app/",
-      image: "Screenshot 2026-06-15 212501.png",
-    },
+   
+    
+    
   ]
 
   return (
