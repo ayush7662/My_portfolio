@@ -15,7 +15,7 @@ export default function Projects() {
       description: "An AI-powered guest messaging automation backend built using FastAPI and PostgreSQL. The system processes guest messages received from platforms like Airbnb, WhatsApp, and Booking.com through a webhook API, classifies the intent of the message, generates AI-powered draft replies using Claude AI, and applies confidence-based escalation logic for automated handling.",
       tech: ["FastAPI","python","SQLALchemy", "PostgreSQL", "Claude AI"],
       github: "https://github.com/ayush7662/nistula-technical-assessment",
-      demo: "https://demo.example.com",
+      demo: "https://nistula-technical-assessment-5eg6.onrender.com/docs",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
     },
     {
@@ -24,7 +24,7 @@ export default function Projects() {
 
       tech: ["React.js","Node.js","MongoDB","Express.js","RestAPI","prism"],
       github: "https://github.com/ayush7662/chat-app",
-      demo: "https://demo.example.com",
+      demo: " https://chat-app-indol-alpha.vercel.app/",
       image: "Screenshot 2026-06-15 210810.png",
     },
     {
@@ -32,24 +32,24 @@ export default function Projects() {
       description: "A full-stack web application that allows users to securely manage image folders, upload images, and track storage usage.",
       tech: ["React.js","Node.js", "Express", "MongoDB"],
       github: "https://github.com/ayush7662/Image-Folder-Manager",
-      demo: "https://demo.example.com",
+      demo: " https://image-folder-manager.vercel.app/dashboard",
       image: "Screenshot 2026-05-14 130906.png",
     },
     {
       title: "AI Site Builder",
       description: "An AI-powered website builder is a software tool that uses artificial intelligence to automatically generate, edit, preview, and deploy websites based on simple conversational prompts from the user.",
             tech: ["Node.js", "Express", "SQL", "React.js","Stripe","prism",],
-      github: "https://github.com/ayush7662/AI_SITE_BUILDER",
+         github: "https://github.com/ayush7662/AI_SITE_BUILDER",
 
-      demo: "12.05.2026_10.35.28_REC.mp4",
+      demo: "https://ai-site-builder-zeta.vercel.app",
       image: "Screenshot 2026-05-12 102118.png",
     },
     {
       title: "Vibe Check",
-      description: "AI-powered resume analysis tool using OpenAI GPT for intelligent feedback",
+      description: "An AI-powered quiz platform that lets you create engaging quizzes instantly, uncover personality insights, and share with friends. Whether you're testing knowledge or exploring vibes, Vibe Check makes learning and self-discovery fun and interactive.",
       tech: ["Next.js", "Tailwind.css+ Redix UI"," Supabase","Google Gemini Flash 2.0","Framer Motion", "Python"],
       github: "https://github.com/ayush7662/Role-1--vibe-check",
-      demo: "https://demo.example.com",
+      demo: "https://role-1-vibe-check.vercel.app/",
       image: "Screenshot 2026-06-15 212501.png",
     },
   ]
