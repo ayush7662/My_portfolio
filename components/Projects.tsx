@@ -12,9 +12,9 @@ export default function Projects() {
   const projects = [
     {
       title: "AI Guest Messaging Automation",
-      description: "Automated guest messaging system using Claude AI for hospitality industry",
-      tech: ["FastAPI", "PostgreSQL", "Claude AI"],
-      github: "https://github.com/ayushraj/guest-messaging",
+      description: "An AI-powered guest messaging automation backend built using FastAPI and PostgreSQL. The system processes guest messages received from platforms like Airbnb, WhatsApp, and Booking.com through a webhook API, classifies the intent of the message, generates AI-powered draft replies using Claude AI, and applies confidence-based escalation logic for automated handling.",
+      tech: ["FastAPI","python","SQLALchemy", "PostgreSQL", "Claude AI"],
+      github: "https://github.com/ayush7662/nistula-technical-assessment",
       demo: "https://demo.example.com",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
     },
@@ -28,12 +28,12 @@ export default function Projects() {
       image: "Screenshot 2026-06-15 210810.png",
     },
     {
-      title: "Identity Reconciliation API",
-      description: "High-performance API for matching and reconciling user identities across systems",
-      tech: ["Node.js", "Express", "SQL"],
-      github: "https://github.com/ayushraj/identity-reconciliation",
+      title: "Image Folder Manager",
+      description: "A full-stack web application that allows users to securely manage image folders, upload images, and track storage usage.",
+      tech: ["React.js","Node.js", "Express", "MongoDB"],
+      github: "https://github.com/ayush7662/Image-Folder-Manager",
       demo: "https://demo.example.com",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+      image: "Screenshot 2026-05-14 130906.png",
     },
     {
       title: "AI Site Builder",
@@ -45,12 +45,12 @@ export default function Projects() {
       image: "Screenshot 2026-05-12 102118.png",
     },
     {
-      title: "AI Resume Analyzer",
+      title: "Vibe Check",
       description: "AI-powered resume analysis tool using OpenAI GPT for intelligent feedback",
-      tech: ["FastAPI", "OpenAI", "Python"],
-      github: "https://github.com/ayushraj/resume-analyzer",
+      tech: ["Next.js", "Tailwind.css+ Redix UI"," Supabase","Google Gemini Flash 2.0","Framer Motion", "Python"],
+      github: "https://github.com/ayush7662/Role-1--vibe-check",
       demo: "https://demo.example.com",
-      image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
+      image: "Screenshot 2026-06-15 212501.png",
     },
   ]
 
