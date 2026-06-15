@@ -71,6 +71,7 @@ export default function Projects() {
       {
       title: "ai-summarizer-fullstack",
       description: "A full-stack AI-powered application that processes unstructured text and converts it into meaningful structured insights using Large Language Models.This project summarizes unstructured text, extracts key points, and detects sentiment (positive/negative/neutral) using AI.",
+      tech:["React.js","Node.js","Express.js","OpenAi-API"],
       github: "https://github.com/ayush7662/ai-summarizer-fullstack",
       demo: " https://ai-summarizer-fullstack-1zeu.vercel.app/",
       image: "Screenshot 2026-06-15 221619.png",
