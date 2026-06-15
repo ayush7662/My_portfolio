@@ -22,7 +22,7 @@ export default function Footer() {
 
           <div className="flex items-center space-x-6">
             <motion.a
-              href="https://github.com/ayushraj"
+              href="https://github.com/ayush7662"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-neon transition-colors"
@@ -32,7 +32,7 @@ export default function Footer() {
               <FaGithub size={20} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/ayushraj"
+              href="https://www.linkedin.com/in/ayush-raj-32a503245/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-neon transition-colors"
@@ -41,7 +41,7 @@ export default function Footer() {
               <FaLinkedin size={20} />
             </motion.a>
             <motion.a
-              href="https://leetcode.com/ayushraj"
+              href="https://leetcode.com/u/uttam7662/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-neon transition-colors"
@@ -50,7 +50,7 @@ export default function Footer() {
               <FaCode size={20} />
             </motion.a>
             <motion.a
-              href="mailto:ayushraj@email.com"
+              href="mailto:kamalayush65@gmail.com"
               className="text-gray-300 hover:text-neon transition-colors"
               whileHover={{ scale: 1.2 }}
             >
