@@ -18,6 +18,16 @@ export default function Projects() {
       demo: "https://nistula-technical-assessment-5eg6.onrender.com/docs",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
     },
+
+     {
+      title: "🎙️ Customer Support Voice Agent with OpenAI Agents SDK",
+      description: "Build an intelligent voice-enabled customer support agent that can answer questions from your documentation using Retrieval-Augmented Generation (RAG),mistralai/Mistral-7B-Instruct-v0.2, and HuggingFace latest Text-to-Speech models.This project demonstrates how to create a production-ready Voice AI system that crawls documentation websites, builds a searchable knowledge base, retrieves relevant information, and responds to users through both text and natural-sounding voice.",
+      
+      tech: ["Firecrawl","python","Qdrant", "edge_tts", "HuggingFace ApI key"],
+      github: "https://github.com/ayush7662/customer_support_voice_Agent/tree/main",
+      demo: "https://customer-support-voice-agent-vx2c.onrender.com/",
+      image: "Screenshot 2026-06-21 214939.png",
+    },
     {
       title: "chat-app",
       description: "A modern real-time chat application built with React (Vite) on the frontend and Node.js + Express + Socket.io on the backend.",
