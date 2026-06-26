@@ -10,6 +10,16 @@ export default function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   const projects = [
+
+     {
+      title: "The Super app ",
+      description: "A comprehensive multi-feature React application built with Next.js 15 that combines user registration, category selection, weather updates, news, notes, timers, and entertainment recommendations into a single cohesive dashboard.",
+      tech: ["Next.js","javaScript","tailwindcss", "Axios","API"],
+      github: "https://github.com/ayush7662/The-Super-App",
+      demo: "https://the-super-app-riye.vercel.app",
+      image: "Screenshot 2026-06-24 130352.png",
+    },
+
     {
       title: "AI Guest Messaging Automation",
       description: "An AI-powered guest messaging automation backend built using FastAPI and PostgreSQL. The system processes guest messages received from platforms like Airbnb, WhatsApp, and Booking.com through a webhook API, classifies the intent of the message, generates AI-powered draft replies using Claude AI, and applies confidence-based escalation logic for automated handling.",
