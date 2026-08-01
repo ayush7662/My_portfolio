@@ -11,6 +11,15 @@ export default function Projects() {
 
   const projects = [
 
+    {
+      title: "BIGA_SITE ",
+      description: "A full-stack eCommerce marketplace application built using the MERN stack (MongoDB, Express, React, Node.js).It supports authentication, role-based access (customer & shopkeeper), product management, cart system, wishlist, and order handling.",
+      tech: ["MongoDB, Express, React, Node.js"],
+      github: "https://github.com/ayush7662/BIGA_SITE",
+      demo: "https://biga-site.vercel.app/",
+      image: "Screenshot 2026-08-01 202519.png",
+    },
+
      {
       title: "The Super app ",
       description: "A comprehensive multi-feature React application built with Next.js 15 that combines user registration, category selection, weather updates, news, notes, timers, and entertainment recommendations into a single cohesive dashboard.",
