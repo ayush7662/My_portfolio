@@ -198,7 +198,7 @@ export default function Projects() {
                     className="flex items-center gap-2 px-4 py-2 bg-neon/10 border border-neon/30 rounded-lg text-neon hover:bg-neon hover:text-background transition-all duration-300"
                   >
                     <FaExternalLinkAlt />
-                    Demo
+                    Live
                   </motion.a>
                 </div>
               </div>
