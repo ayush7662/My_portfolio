@@ -190,7 +190,7 @@ export default function Projects() {
                     GitHub
                   </motion.a>
                   <motion.a
-                    href={project.demo}
+                    href={project.Live}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
