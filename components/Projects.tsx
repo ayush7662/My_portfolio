@@ -11,12 +11,32 @@ export default function Projects() {
 
   const projects = [
 
+     {
+      title: "Makhana Marketplace ",
+      description: "Makhana Marketplace is a full‑stack e‑commerce app for buying and selling makhana (fox nuts). It uses FastAPI and MongoDB on the backend, React + Vite on the frontend, integrates Stripe for payments, and includes optional AI features (semantic search, assistant, vector indexing",
+      tech: ["MongoDB, React,FastAPI,STRIPE, TAilwindCSS, Vite, sematic search, vector indexing"],
+      github: "https://github.com/ayushuttam6541-code/Makhana_Marketplace",
+      Live: "https://makhana-marketplace.vercel.app",
+      image: "Screenshot 2026-08-07 163838.png",
+    },
+
+
+    {
+      title: "The Foundation Academy - School Management System ",
+      description: "A complete full-stack web application for managing school operations, admissions, payments, and communication, Ai Chat Support. Built with modern technologies for scalability and performance.",
+      tech: ["MongoDB, React, FastAPI,STRIPE, TailwindCSS,"],
+      github: "https://github.com/ayushuttam6541-code/School_Management_System",
+      Live: " https://school-management-system-omega-blush.vercel.app",
+      image: "Screenshot 2026-08-07 200507.png",
+    },
+
+
     {
       title: "BIGA_SITE ",
       description: "A full-stack eCommerce marketplace application built using the MERN stack (MongoDB, Express, React, Node.js).It supports authentication, role-based access (customer & shopkeeper), product management, cart system, wishlist, and order handling.",
       tech: ["MongoDB, Express, React, Node.js"],
       github: "https://github.com/ayush7662/BIGA_SITE",
-      demo: "https://biga-site.vercel.app/",
+      Live: "https://biga-site.vercel.app/",
       image: "Screenshot 2026-08-01 202519.png",
     },
 
@@ -25,7 +45,7 @@ export default function Projects() {
       description: "A comprehensive multi-feature React application built with Next.js 15 that combines user registration, category selection, weather updates, news, notes, timers, and entertainment recommendations into a single cohesive dashboard.",
       tech: ["Next.js","javaScript","tailwindcss", "Axios","API"],
       github: "https://github.com/ayush7662/The-Super-App",
-      demo: "https://the-super-app-riye.vercel.app",
+      Live: "https://the-super-app-riye.vercel.app",
       image: "Screenshot 2026-06-24 130352.png",
     },
 
@@ -34,7 +54,7 @@ export default function Projects() {
       description: "An AI-powered guest messaging automation backend built using FastAPI and PostgreSQL. The system processes guest messages received from platforms like Airbnb, WhatsApp, and Booking.com through a webhook API, classifies the intent of the message, generates AI-powered draft replies using Claude AI, and applies confidence-based escalation logic for automated handling.",
       tech: ["FastAPI","python","SQLALchemy", "PostgreSQL", "Claude AI"],
       github: "https://github.com/ayush7662/nistula-technical-assessment",
-      demo: "https://nistula-technical-assessment-5eg6.onrender.com/docs",
+      Live: "https://nistula-technical-assessment-5eg6.onrender.com/docs",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
     },
 
@@ -44,7 +64,7 @@ export default function Projects() {
       
       tech: ["Firecrawl","python","Qdrant", "edge_tts", "HuggingFace ApI key"],
       github: "https://github.com/ayush7662/customer_support_voice_Agent/tree/main",
-      demo: "https://customer-support-voice-agent-vx2c.onrender.com/",
+      Live: "https://customer-support-voice-agent-vx2c.onrender.com/",
       image: "Screenshot 2026-06-21 214939.png",
     },
     {
@@ -53,7 +73,7 @@ export default function Projects() {
 
       tech: ["React.js","Node.js","MongoDB","Express.js","RestAPI","prism"],
       github: "https://github.com/ayush7662/chat-app",
-      demo: " https://chat-app-indol-alpha.vercel.app/",
+      Live: " https://chat-app-indol-alpha.vercel.app/",
       image: "Screenshot 2026-06-15 210810.png",
     },
     {
@@ -61,7 +81,7 @@ export default function Projects() {
       description: "A full-stack web application that allows users to securely manage image folders, upload images, and track storage usage.",
       tech: ["React.js","Node.js", "Express", "MongoDB"],
       github: "https://github.com/ayush7662/Image-Folder-Manager",
-      demo: " https://image-folder-manager.vercel.app/dashboard",
+      Live: " https://image-folder-manager.vercel.app/dashboard",
       image: "Screenshot 2026-05-14 130906.png",
     },
     {
@@ -70,7 +90,7 @@ export default function Projects() {
             tech: ["Node.js", "Express", "SQL", "React.js","Stripe","prism",],
          github: "https://github.com/ayush7662/AI_SITE_BUILDER",
 
-      demo: "https://ai-site-builder-zeta.vercel.app",
+      Live: "https://ai-site-builder-zeta.vercel.app",
       image: "Screenshot 2026-05-12 102118.png",
     },
     {
@@ -78,7 +98,7 @@ export default function Projects() {
       description: "An AI-powered quiz platform that lets you create engaging quizzes instantly, uncover personality insights, and share with friends. Whether you're testing knowledge or exploring vibes, Vibe Check makes learning and self-discovery fun and interactive.",
       tech: ["Next.js", "Tailwind.css+ Redix UI"," Supabase","Google Gemini Flash 2.0","Framer Motion", "Python"],
       github: "https://github.com/ayush7662/Role-1--vibe-check",
-      demo: "https://role-1-vibe-check.vercel.app/",
+      Live: "https://role-1-vibe-check.vercel.app/",
       image: "Screenshot 2026-06-15 212501.png",
     },
     {
@@ -86,7 +106,7 @@ export default function Projects() {
       description: "A prototype of an AI-powered loan onboarding agent that takes initiative and never hallucinates.Left panel: An intelligent chat agent that drives the conversation forwardRight panel: A live application form that fills in real-time as the agent works.",
       tech: ["React.js", "Vite"," Plain CSS","Mock data/APIs"],
       github: "https://github.com/ayush7662/Self-Driving-Loan-Onboarding-Agent",
-      demo: "https://self-driving-loan-onboarding-agent.vercel.app/",
+      Live: "https://self-driving-loan-onboarding-agent.vercel.app/",
       image: "Screenshot 2026-06-15 215229.png",
     },
         {
@@ -94,7 +114,7 @@ export default function Projects() {
       description: "This is a simple chatbot project built using Next.js. It helps users practice interview questions in a chat format.The chatbot asks questions and gives feedback on answers, just like a real interview.",
       tech: ["React.js", "Node","API_KEY","MySQl","Prism"],
       github: "https://github.com/ayush7662/Ai_interview_coach",
-      demo: " https://ai-interview-coach-osgh.vercel.app/",
+      Live: " https://ai-interview-coach-osgh.vercel.app/",
       image: "Screenshot 2026-06-15 221619.png",
     },
       {
@@ -102,7 +122,7 @@ export default function Projects() {
       description: "A full-stack AI-powered application that processes unstructured text and converts it into meaningful structured insights using Large Language Models.This project summarizes unstructured text, extracts key points, and detects sentiment (positive/negative/neutral) using AI.",
       tech:["React.js","Node.js","Express.js","OpenAi-API"],
       github: "https://github.com/ayush7662/ai-summarizer-fullstack",
-      demo: " https://ai-summarizer-fullstack-1zeu.vercel.app/",
+      Live: " https://ai-summarizer-fullstack-1zeu.vercel.app/",
       image: "Screenshot 2026-06-15 221811.png",
     },
    
