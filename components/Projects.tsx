@@ -2,14 +2,12 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"
+import { useRef, useState, useEffect } from "react"
+import { FaGithub, FaExternalLinkAlt, FaMagic } from "react-icons/fa"
+import ProjectExplainer from "./ProjectExplainer"
+import ProjectSearch from "./ProjectSearch"
 
-export default function Projects() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-
-  const projects = [
+const projectsData = [
 
      {
       title: "Makhana Marketplace ",
@@ -130,6 +128,19 @@ export default function Projects() {
     
   ]
 
+export default function Projects() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [explainerProject, setExplainerProject] = useState<{ name: string; isOpen: boolean }>({
+    name: "",
+    isOpen: false
+  })
+  const [filteredProjects, setFilteredProjects] = useState<any[]>([])
+
+  useEffect(() => {
+    setFilteredProjects(projectsData)
+  }, [])
+
   return (
     <section id="projects" className="py-20 px-6">
       <div className="container mx-auto">
@@ -144,10 +155,13 @@ export default function Projects() {
             My <span className="text-neon">Projects</span>
           </h2>
           <div className="w-24 h-1 bg-neon mx-auto shadow-neon" />
+          <div className="mt-4 flex justify-center">
+            <ProjectSearch projects={projectsData} onFilteredProjects={setFilteredProjects} />
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
@@ -168,7 +182,7 @@ export default function Projects() {
                 <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tech.map((tech, techIndex) => (
+                  {project.tech.map((tech: string, techIndex: number) => (
                     <span
                       key={techIndex}
                       className="px-3 py-1 bg-neon/10 text-neon text-xs rounded-full border border-neon/20"
@@ -200,12 +214,28 @@ export default function Projects() {
                     <FaExternalLinkAlt />
                     Live
                   </motion.a>
+                  <motion.button
+                    onClick={() => setExplainerProject({ name: project.title, isOpen: true })}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 px-4 py-2 bg-neon/10 border border-neon/30 rounded-lg text-neon hover:bg-neon/20 transition-all duration-300"
+                    title="Explain with AI"
+                  >
+                    <FaMagic />
+                    Explain
+                  </motion.button>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
+
+      <ProjectExplainer
+        projectName={explainerProject.name}
+        isOpen={explainerProject.isOpen}
+        onClose={() => setExplainerProject({ name: "", isOpen: false })}
+      />
     </section>
   )
 }

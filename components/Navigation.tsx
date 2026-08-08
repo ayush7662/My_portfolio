@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { FaGithub, FaLinkedin, FaCode, FaEnvelope } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaCode, FaEnvelope, FaRobot, FaCrosshairs, FaTimes, FaSpinner } from "react-icons/fa"
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("home")
   const [isScrolled, setIsScrolled] = useState(false)
+  const [showRecruiterMode, setShowRecruiterMode] = useState(false)
 
   const sections = [
     { id: "home", label: "Home" },
@@ -94,6 +95,26 @@ export default function Navigation() {
                 )}
               </motion.button>
             ))}
+            <motion.button
+              onClick={() => document.dispatchEvent(new CustomEvent('openAIChat'))}
+              className="relative px-2 py-1 transition-all duration-300 text-neon text-glow"
+              whileHover={{ scale: 1.1 }}
+            >
+              <span className="flex items-center gap-2">
+                <FaRobot />
+                Ask AI
+              </span>
+            </motion.button>
+            <motion.button
+              onClick={() => setShowRecruiterMode(true)}
+              className="relative px-2 py-1 transition-all duration-300 text-neon text-glow"
+              whileHover={{ scale: 1.1 }}
+            >
+              <span className="flex items-center gap-2">
+                <FaCrosshairs />
+                Recruiter Mode
+              </span>
+            </motion.button>
           </div>
 
           <div className="flex items-center space-x-4">
@@ -135,6 +156,156 @@ export default function Navigation() {
           </div>
         </div>
       </div>
+
+      {/* Recruiter Mode Modal */}
+      {showRecruiterMode && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            className="glass-card rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-8"
+          >
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-3xl font-bold text-neon text-glow">🎯 Recruiter Mode</h2>
+              <motion.button
+                onClick={() => setShowRecruiterMode(false)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-gray-400 hover:text-neon transition-colors"
+              >
+                <FaTimes size={24} />
+              </motion.button>
+            </div>
+
+            <div className="space-y-6">
+              <div className="glass-card p-6 rounded-xl">
+                <h3 className="text-xl font-bold text-white mb-4">Professional Summary</h3>
+                <p className="text-gray-300">
+                  Ayush Raj is a Software Developer & AI Engineer with expertise in full-stack development and AI/ML technologies. 
+                  Specializing in MERN stack, Python, FastAPI, and modern AI technologies like LangChain and OpenAI APIs.
+                </p>
+              </div>
+
+              <div className="glass-card p-6 rounded-xl">
+                <h3 className="text-xl font-bold text-white mb-4">Core Technical Skills</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="text-neon font-semibold mb-2">Frontend</h4>
+                    <p className="text-gray-300 text-sm">React, Next.js, TypeScript, Tailwind CSS, HTML, CSS, JavaScript</p>
+                  </div>
+                  <div>
+                    <h4 className="text-neon font-semibold mb-2">Backend</h4>
+                    <p className="text-gray-300 text-sm">Node.js, Express.js, FastAPI, REST APIs</p>
+                  </div>
+                  <div>
+                    <h4 className="text-neon font-semibold mb-2">AI/ML</h4>
+                    <p className="text-gray-300 text-sm">Python, LangChain, OpenAI API, Hugging Face, Vector Databases, RAG Systems</p>
+                  </div>
+                  <div>
+                    <h4 className="text-neon font-semibold mb-2">Databases</h4>
+                    <p className="text-gray-300 text-sm">MongoDB, PostgreSQL, MySQL</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-card p-6 rounded-xl">
+                <h3 className="text-xl font-bold text-white mb-4">Quick AI Insights</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <RecruiterAIButton 
+                    title="Best AI Projects"
+                    summaryType="ai-engineer"
+                    icon="🤖"
+                  />
+                  <RecruiterAIButton 
+                    title="Best Full Stack Projects"
+                    summaryType="fullstack"
+                    icon="💻"
+                  />
+                  <RecruiterAIButton 
+                    title="Why Hire Ayush?"
+                    summaryType="hire"
+                    icon="⭐"
+                  />
+                  <RecruiterAIButton 
+                    title="30-Second Summary"
+                    summaryType="summary"
+                    icon="⚡"
+                  />
+                </div>
+              </div>
+
+              <div className="glass-card p-6 rounded-xl">
+                <h3 className="text-xl font-bold text-white mb-4">Contact & Links</h3>
+                <div className="flex flex-wrap gap-4">
+                  <a href="mailto:kamalayush65@gmail.com" className="px-4 py-2 bg-neon/10 border border-neon/30 rounded-lg text-neon hover:bg-neon/20 transition-colors">
+                    📧 Email
+                  </a>
+                  <a href="https://github.com/ayush7662" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-neon/10 border border-neon/30 rounded-lg text-neon hover:bg-neon/20 transition-colors">
+                    💻 GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/ayush-raj-32a503245/" target="_blank" rel="noopener noreferrer" className="px-4 py-2 bg-neon/10 border border-neon/30 rounded-lg text-neon hover:bg-neon/20 transition-colors">
+                    💼 LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </motion.nav>
+  )
+}
+
+function RecruiterAIButton({ title, summaryType, icon }: { title: string; summaryType: string; icon: string }) {
+  const [isLoading, setIsLoading] = useState(false)
+  const [response, setResponse] = useState<string | null>(null)
+
+  const handleClick = async () => {
+    setIsLoading(true)
+    setResponse(null)
+    
+    try {
+      const res = await fetch("/api/ai", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "recruiter-summary",
+          summaryType
+        })
+      })
+      
+      const data = await res.json()
+      setResponse(data.message || "No response available")
+    } catch (error) {
+      setResponse("Error generating response. Please try again.")
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  return (
+    <div className="space-y-2">
+      <motion.button
+        onClick={handleClick}
+        disabled={isLoading}
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        className="w-full px-4 py-3 bg-neon/10 border border-neon/30 rounded-lg text-neon hover:bg-neon/20 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+      >
+        <span className="text-xl">{icon}</span>
+        <span className="font-semibold">{title}</span>
+        {isLoading && <FaSpinner className="animate-spin ml-auto" />}
+      </motion.button>
+      {response && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="p-4 bg-background/50 rounded-lg text-gray-300 text-sm"
+        >
+          {response}
+        </motion.div>
+      )}
+    </div>
   )
 }

@@ -14,12 +14,39 @@ export default function Contact() {
     subject: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    alert("Thank you for your message! I will get back to you soon.")
-    setFormData({ name: "", email: "", subject: "", message: "" })
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus("success")
+        setFormData({ name: "", email: "", subject: "", message: "" })
+        setTimeout(() => setSubmitStatus("idle"), 5000)
+      } else {
+        setSubmitStatus("error")
+        console.error("Contact form error:", data.error)
+      }
+    } catch (error) {
+      setSubmitStatus("error")
+      console.error("Contact form submission error:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -164,10 +191,31 @@ export default function Contact() {
                 type="submit"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full px-8 py-3 bg-neon text-background font-semibold rounded-lg shadow-neon hover:shadow-neon-hover transition-all duration-300"
+                disabled={isSubmitting}
+                className="w-full px-8 py-3 bg-neon text-background font-semibold rounded-lg shadow-neon hover:shadow-neon-hover transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </motion.button>
+
+              {submitStatus === "success" && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-3 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-sm"
+                >
+                  Thank you for your message! I will get back to you soon.
+                </motion.div>
+              )}
+
+              {submitStatus === "error" && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="p-3 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-sm"
+                >
+                  Something went wrong. Please try again.
+                </motion.div>
+              )}
             </form>
           </motion.div>
         </div>

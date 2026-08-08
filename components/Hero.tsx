@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
-import { FaGithub, FaLinkedin, FaCode, FaEnvelope, FaDownload } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaCode, FaEnvelope, FaDownload, FaRobot } from "react-icons/fa"
 import Image from "next/image"
 
 export default function Hero() {
@@ -170,6 +170,17 @@ export default function Hero() {
   >
     Contact Me
   </motion.button>
+
+  {/* AI Chat Button */}
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={() => document.dispatchEvent(new CustomEvent('openAIChat'))}
+    className="px-8 py-3 bg-neon/10 border-2 border-neon/50 text-neon font-semibold rounded-lg hover:bg-neon/20 hover:border-neon transition-all duration-300 flex items-center gap-2"
+  >
+    <FaRobot />
+    Ask AI
+  </motion.button>
 </motion.div>
           </motion.div>
 
@@ -186,10 +197,11 @@ export default function Hero() {
             >
               <div className="w-72 h-72 md:w-96 md:h-96 hexagon neon-border animate-float relative overflow-hidden bg-background">
                 <div className="absolute inset-0 bg-gradient-to-br from-neon/20 to-transparent" />
-                <Image
+<Image
                   src="/WhatsApp Image 2026-06-15 at 1.34.49 PM.jpeg"
                   alt="Ayush Raj"
                   fill
+                  sizes="(max-width: 768px) 18rem, 24rem"
                   className="object-cover"
                   priority
                 />
