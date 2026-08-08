@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { FaTimes, FaSpinner, FaMagic } from "react-icons/fa"
 import ReactMarkdown from "react-markdown"
@@ -46,12 +46,12 @@ export default function ProjectExplainer({ projectName, isOpen, onClose }: Proje
   }
 
   // Reset state when modal opens
-  useState(() => {
+  useEffect(() => {
     if (isOpen) {
       setExplanation(null)
       setError(null)
     }
-  })
+  }, [isOpen])
 
   return (
     <AnimatePresence>

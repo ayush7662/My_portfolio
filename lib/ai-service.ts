@@ -296,16 +296,25 @@ Please ask a specific question, and I'll provide information from the portfolio 
 
 // Generate project explanation
 export async function generateProjectExplanation(projectName: string): Promise<AIResponse> {
-  const project = portfolioData.projects.find(p => 
-    p.name.toLowerCase().includes(projectName.toLowerCase())
-  )
+  // Normalize project name - remove trailing spaces, multiple spaces, and handle case
+  const normalizedName = projectName.trim().replace(/\s+/g, ' ').toLowerCase()
+  
+  const project = portfolioData.projects.find(p => {
+    const normalizedPortfolioName = p.name.trim().replace(/\s+/g, ' ').toLowerCase()
+    return normalizedPortfolioName === normalizedName || 
+           normalizedPortfolioName.includes(normalizedName) ||
+           normalizedName.includes(normalizedPortfolioName)
+  })
 
   if (!project) {
+    console.log(`Project not found: "${projectName}" (normalized: "${normalizedName}")`)
+    console.log("Available projects:", portfolioData.projects.map(p => p.name))
     return {
       message: "I couldn't find that project in Ayush's portfolio."
     }
   }
 
+  // Try AI first, fall back to portfolio data
   const prompt = `Explain the project "${project.name}" in detail. Include:
 - What the project does
 - Problem it solves
@@ -317,7 +326,14 @@ export async function generateProjectExplanation(projectName: string): Promise<A
 
 Use the portfolio information provided.`
 
-  return generateAIResponse([{ role: "user", content: prompt }])
+  const aiResponse = await generateAIResponse([{ role: "user", content: prompt }])
+  
+  // If AI fails, generate explanation from portfolio data
+  if (aiResponse.error || aiResponse.message.includes("unable to connect")) {
+    return generateLocalProjectExplanation(project)
+  }
+  
+  return aiResponse
 }
 
 // Generate recruiter summary
@@ -332,6 +348,42 @@ export async function generateRecruiterSummary(type: string): Promise<AIResponse
   const prompt = prompts[type] || "Generate a summary of Ayush Raj for a recruiter."
 
   return generateAIResponse([{ role: "user", content: prompt }])
+}
+
+// Generate project explanation from portfolio data (fallback)
+function generateLocalProjectExplanation(project: any): AIResponse {
+  const hasAI = project.aiComponents && project.aiComponents.toLowerCase() !== "no ai components"
+  
+  let explanation = `# ${project.name}
+
+## Overview
+${project.description}
+
+## Technologies Used
+${project.technologies.map((tech: string) => `- **${tech}**`).join('\n')}
+
+## Key Features
+${project.features.map((feature: string) => `- ${feature}`).join('\n')}
+
+${hasAI ? `## AI/ML Components
+${project.aiComponents}
+
+` : ''}## Architecture
+${project.architecture}
+
+## Why This Project is Interesting
+${hasAI 
+  ? `This project demonstrates advanced AI/ML integration with modern web technologies. The ${project.aiComponents.toLowerCase()} showcases practical applications of artificial intelligence in solving real-world problems.`
+  : `This project demonstrates solid full-stack development skills with a focus on scalability, user experience, and modern development practices.`
+}
+
+## Links
+- **GitHub:** ${project.github}
+- **Live Demo:** ${project.demo}`
+
+  return {
+    message: explanation
+  }
 }
 
 // Search projects by query

@@ -215,7 +215,7 @@ export default function Projects() {
                     Live
                   </motion.a>
                   <motion.button
-                    onClick={() => setExplainerProject({ name: project.title, isOpen: true })}
+                    onClick={() => setExplainerProject({ name: project.title.trim(), isOpen: true })}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-2 px-4 py-2 bg-neon/10 border border-neon/30 rounded-lg text-neon hover:bg-neon/20 transition-all duration-300"
