@@ -9,6 +9,25 @@ import ProjectSearch from "./ProjectSearch"
 
 const projectsData = [
 
+  {
+  title: "Patna Piano Academy",
+  description:
+    "Patna Piano Academy is a premium piano learning platform that allows students to explore piano classes, book online or offline sessions, make secure payments through Razorpay, and manage their bookings through a student dashboard. It also includes a teacher admin dashboard for managing students, bookings, classes, and payments.",
+  tech: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "MongoDB",
+    "Tailwind CSS",
+    "Razorpay",
+    "JWT",
+    "bcrypt"
+  ],
+  github: "https://github.com/ayushuttam6541-code/Patna_Piano_Academy",
+  Live: "https://patna-piano-academy-gold.vercel.app/",
+  image: "piano.jpeg",
+},
+
      {
       title: "Makhana Marketplace ",
       description: "Makhana Marketplace is a full‑stack e‑commerce app for buying and selling makhana (fox nuts). It uses FastAPI and MongoDB on the backend, React + Vite on the frontend, integrates Stripe for payments, and includes optional AI features (semantic search, assistant, vector indexing",
@@ -24,7 +43,7 @@ const projectsData = [
       description: "A complete full-stack web application for managing school operations, admissions, payments, and communication, Ai Chat Support. Built with modern technologies for scalability and performance.",
       tech: ["MongoDB, React, FastAPI,STRIPE, TailwindCSS,"],
       github: "https://github.com/ayushuttam6541-code/School_Management_System",
-      Live: " https://school-management-system-omega-blush.vercel.app",
+      Live: "https://school-management-system-two-dun.vercel.app/",
       image: "Screenshot 2026-08-07 200507.png",
     },
 
